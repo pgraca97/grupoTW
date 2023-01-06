@@ -1,5 +1,6 @@
+
 html {
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
   }
   
   body {
@@ -19,7 +20,8 @@ html {
     align-items: center;
     justify-content: space-between;
   }
-  
+
+
   .search {
     display: flex;
     align-items: center;
@@ -37,12 +39,20 @@ html {
     color: lightgray;
   }
   
-  .limitedOffer {
-    font-size: 20px;
-    border-bottom: 2px solid green;
+  .loginModela{
+    position: absolute;
+    height: 40px;
+    bottom: -40;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #369e62;
+    color: white;
+    border: none;
     cursor: pointer;
   }
-  
+
   .navBottom {
     display: flex;
     align-items:center;
@@ -56,6 +66,67 @@ html {
     font-weight: 400;
   }
   
+  label {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .payInput {
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+  
+  .payInput::placeholder {
+    color: rgb(163, 163, 163);
+  }
+  
+  .cardIcons {
+    display: flex;
+  }
+  
+  .cardIcon {
+    margin-right: 10px;
+  }
+  
+  .cardInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sm {
+    width: 30%;
+  }
+  
+  .payButton {
+    position: absolute;
+    height: 40px;
+    bottom: -40;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #369e62;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+  }
   .slider {
     background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
@@ -106,7 +177,6 @@ html {
     font-weight: 300;
     text-align: center;
     color: white;
-    border: 1px solid gray;
     z-index: 1;
   }
   

@@ -4,22 +4,30 @@ const menuItems = document.querySelectorAll(".menuItem");
 const products = [
   {
     id: 1,
-    title: "Air Force",
+    title: "Nike",
     price: 119,
     colors: [
       {
-        code: "black",
-        img: "./img/air.png",
+        code: "Red",
+        img: "./img/3.png",
       },
       {
-        code: "darkblue",
-        img: "./img/air2.png",
+        code: "Purple",
+        img: "./img/c5.png",
       },
+      {
+      code: "green",
+      img: "./img/d5.png ",
+      },
+      {
+      code: "orange",
+      img: "./img/f5.png",
+      }
     ],
   },
   {
     id: 2,
-    title: "Air Jordan",
+    title: "New Balance",
     price: 149,
     colors: [
       {
@@ -34,7 +42,7 @@ const products = [
   },
   {
     id: 3,
-    title: "Blazer",
+    title: "Reebok",
     price: 109,
     colors: [
       {
@@ -49,7 +57,7 @@ const products = [
   },
   {
     id: 4,
-    title: "Crater",
+    title: "Adidas",
     price: 129,
     colors: [
       {
@@ -64,7 +72,7 @@ const products = [
   },
   {
     id: 5,
-    title: "Hippie",
+    title: "Asics",
     price: 99,
     colors: [
       {
@@ -127,6 +135,10 @@ currentProductSizes.forEach((size, index) => {
 const productButton = document.querySelector(".productButton");
 const payment = document.querySelector(".payment");
 const close = document.querySelector(".close");
+const login = document.querySelector("#login");
+const loginModal = document.querySelector("#loginModal");
+const register = document.querySelector("#register");
+const registerModal = document.querySelector("#registerModal");
 
 productButton.addEventListener("click", () => {
   payment.style.display = "flex";
@@ -134,4 +146,16 @@ productButton.addEventListener("click", () => {
 
 close.addEventListener("click", () => {
   payment.style.display = "none";
+});
+
+login.addEventListener("click", () => {
+  loginModal.style.display = "flex";
+});
+
+closeee.addEventListener("click", () => {
+  closeee.style.display = "flex";
+});
+
+register.addEventListener("click", () => {
+  registerModal.style.display = "flex";
 });
