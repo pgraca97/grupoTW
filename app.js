@@ -139,6 +139,8 @@ const login = document.querySelector("#login");
 const loginModal = document.querySelector("#loginModal");
 const register = document.querySelector("#register");
 const registerModal = document.querySelector("#registerModal");
+const fechar = document.querySelector(".fechar")
+const fecharr = document.querySelector(".fecharr")
 
 productButton.addEventListener("click", () => {
   payment.style.display = "flex";
@@ -152,10 +154,23 @@ login.addEventListener("click", () => {
   loginModal.style.display = "flex";
 });
 
-closeee.addEventListener("click", () => {
-  closeee.style.display = "flex";
-});
-
 register.addEventListener("click", () => {
   registerModal.style.display = "flex";
 });
+
+fechar.addEventListener("click", () => {
+  loginModal.style.display = "none";
+});
+
+fecharr.addEventListener("click", () => {
+  registerModal.style.display = "none";
+});
+
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}

@@ -28,38 +28,44 @@
             </div>
             <div class="navItem">
                 <a href="#login" id="login">Login</a> | <a href="#register" id="register">Register</a>
-                <div id="loginModal" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0;  display: none; align-items: center; justify-content: center; z-index: 1;">
-                  <form action="/form-submit/index.html" method="post" id="form1" target="blank">
-                    <h1 class="loginTytle">SIGN IN</h1>  
-                    <legend>Full Name</legend>
-                        <label for="firstname">First<b>(*)</b>:</label>
-                        <input type="text" name="firstname" id="firstname" required>
-                        <h1></h1>
-                        <label for="lastname">Last<b>(*)</b>:</label>
-                        <input type="text" name="lastname" id="lastname" required>
-                        <h1></h1>
-                        <label for="age">Age<b>(*)</b>:</label>
-                        <input type="number" name="age" id="age" required>
-                     
-                        <legend>Contact Information</legend>
-                        <input type="email" name="email" id="email" pattern="[a-z0-9.%+-]+@[a-z0-9.-]+.[a-z]{2,}$" placeholder="username@domain.com">
-                        <h1></h1>
-                        <input type="tel" name="mobile" id="mobile" placeholder="Mobile Phone">
-                        <h1></h1>
-                        <input type="url" name="website" id="website" pattern="https?://.+" title="Include http://" placeholder="Personal Website :URL">
-                
-                      <legend>Gender</legend>
-                
-                        <label for="genderm">Male: </label>
-                        <input type="radio" name="gender" id="genderm">
-                        <label for="genderf">Female: </label>
-                        <input type="radio" name="gender" id="genderf">
-                        <label for="other">Other: </label>
-                        <input type="radio" name="gender" id="other">
-                    <h1><br><button type="submit" form="form1" value="Subscribe">Sign Up</button></h1>
-                    <span class="close">X</span>
-                  </div>
+                <div id="loginModal">
+                    <div class="form-container">
+                        <form action="/form-submit/index.html" method="post" id="form1" target="blank">
+                          <h1 class="loginTitle">Sign In</h1>  
+                              <label for="firstname">Nome de Utilizador</label>
+                              <input placeholder="nome de utilizador" type="text" name="firstname" id="firstname" class="nome" required>
+                              <h1></h1>
+                              Palavra-passe<input class="nome" type="password" value="" id="myInput">
+                              <input type="checkbox" onclick="myFunction()">Show Password
+                          <h1><br><button class="signin" type="submit" form="form1" value="Subscribe">Sign Up</button></h1>
+                          </form>
+                          <span class="fechar">X</span>
+                    </div>
+                </div>
             </div>
+            <div id="registerModal">
+                <div class="form-contain">
+                    <form action="/form-submit/index.html" method="post" id="form2" target="blank">
+                      <h1 class="registerTitle">Sign Up</h1>  
+                  <legend>Nome Completo</legend>
+                      <label>Priemiro<p></p></label>
+                      <input type="text" name="firstname" id="firstname" required class="name">
+                      <h1></h1>
+                      Último<p></p><input type="text" name="lastname" id="lastname" required class="name">
+                      <h1></h1>
+                      <legend>Informações de Contacto</legend>
+                      <label>Email<p></p></label>
+                      <input type="email" name="email" id="email" pattern="[a-z0-9.%+-]+@[a-z0-9.-]+.[a-z]{2,}$" placeholder="username@domain.com" class="name">
+                      <h1></h1>
+                      <label>Número telefonico<p></p></label>
+                      <input type="tel" name="mobile" id="mobile" placeholder="telemovél" class="name">
+                  <h1><br><button class="signup" type="submit" form="form1" value="Subscribe">Sign Up</button></h1>
+                  <span class="fecharr">X</span>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
         </div>
         <div class="navBottom">
             <h3 class="menuItem">NIKE</h3>
@@ -251,11 +257,11 @@
             <div class="footerMenu">
                 <h1 class="fMenuTitle">Products</h1>
                 <ul class="fList">
-                    <li class="fListItem">Air Force</li>
-                    <li class="fListItem">NIKE TRAINER LOW</li>
-                    <li class="fListItem">Blazer</li>
-                    <li class="fListItem">Crater</li>
-                    <li class="fListItem">Hippie</li>
+                    <li class="fListItem">Nike</li>
+                    <li class="fListItem">New Ballance</li>
+                    <li class="fListItem">Reebok</li>
+                    <li class="fListItem">Adidas</li>
+                    <li class="fListItem">Asics</li>
                 </ul>
             </div>
         </div>
