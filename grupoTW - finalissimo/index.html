@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Hamburger Animation</title>
+  <link rel="stylesheet" href="styles\style.css">
+</head>
+<body>
+  <div id="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form id="signup-form">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="txt" placeholder="Username" required="">
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>SIGN UP</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form id="login-form">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="pswd" placeholder="Password" required="">
+					<button>LOGIN</button>
+				</form>
+			</div>
+	</div>
+  <div class="container">
+    <div class="item">
+      <img src="images\New Balance\Aimé Leon Dore x 550 'Green Yellow'\1.png" alt="Item 1">
+      <img src="images\New Balance\Aimé Leon Dore x 550 'Evergreen'\1.png" alt="Item 2">
+      <img src="images\New Balance\Aimé Leon Dore x 827 'White'\1.png" alt="Item 3">
+      <img src="images\New Balance\Salehe Bembury x 2002R 'Peace Be The Journey'\1.png" alt="Item 4">
+      <img src="images\Nike\Florida A&M University x Dunk Low 'Rattlers'\1.png" alt="Item 5">
+      <img src="images\New Balance\Aimé Leon Dore x 550 'Green Yellow'\1.png" alt="Item 1">
+      <img src="images\New Balance\Aimé Leon Dore x 550 'Evergreen'\1.png" alt="Item 2">
+      <img src="images\New Balance\Aimé Leon Dore x 827 'White'\1.png" alt="Item 3">
+      <img src="images\New Balance\Salehe Bembury x 2002R 'Peace Be The Journey'\1.png" alt="Item 4">
+      <img src="images\Nike\Florida A&M University x Dunk Low 'Rattlers'\1.png" alt="Item 5">
+    </div>
+  </div>
+  <div class="btn-container">
+    <button id="log-btn">log in or sign up</button>
+    <button id="slide-btn">CLICK ME</button>
+  </div>
+  <div class="slide-container">
+    <div id="text-box-content">
+      <div id="date-container">
+          <span id="label">Bem-vindo!</span>
+          <span id="value"></span>
+      </div>
+    </div>
+    <div id="text-box-button1">
+        <button id="button1">MY ACCOUNT</button>
+    </div>
+    <div id="text-box-button2">
+      <button id="button2">MY ORDERS</button>
+    </div>
+    <div id="text-box-button3">
+      <button id="button3">MY RETURNS</button>
+    </div>
+    <div id="text-box-button4">
+      <button id="opinions-collector-btn">OPINIONS COLLECTOR</button>
+    </div>
+    <div id="opinions-form-container" style="display: none;">
+      <form id="opinions-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="opinion">Opinion:</label>
+        <textarea id="opinion" name="opinion" required></textarea>
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <input type="submit" value="Submit Opinion">
+      </form>
+    </div>
+  </div>
+    <div class="navTop">
+        <div class="menu-btn">
+          <div class="menu-btn__burger"></div>
+        </div>
+        <ul class="menu">
+          <div class="menu-links">
+            <li class="menu__item"><a href="#about">NIKE</a></li>
+            <li class="menu__item"><a href="#services">NEW BALLANCE</a></li>
+            <li class="menu__item"><a href="#contact">REEBOK</a></li>
+            <li class="menu__item"><a href="#contact">ADIDAS</a></li>
+            <li class="menu__item"><a href="#contact">ASICS</a></li>
+          </div>
+        </ul>  
+      <div class="search-bar">
+        <input type="text" placeholder="SEARCH">
+      </div>        
+      <div class="navShowed">
+        <h3 class="menuItem"><a href="shopall.html">SHOP ALL</a></h3>
+        <h3 class="menuItem">ABOUT</h3>
+        <h3 class="menuItem">CART</h3>
+      </div> 
+    </div>
+
+    <footer class="slide-up-footer">
+      <div class="footer-text">
+      <p>FREE SHIPPING IN PORTUGAL / IN EUROPE FROM 150€ / EASY RETURNS</p>
+      © GRUPO 15, 2023. ALL RIGHTS RESERVED. TW / TSIW
+      </div>
+      <div class="footer-text2">
+        <a href="#about">ABOUT</a><a href="#about">TERMS</a><a href="#about">PRIVACY</a><a href="#about">COOKIE SETTINGS</a><a href="#about">SUPPORT</a>
+      </div>
+      <div class="sign-up-promos">
+        <div id="info-text"></div>
+        <form id="newsletter-form" action="your-newsletter-signup-action" method="post">
+          <input type="email" name="email" placeholder="Sign up for exclusive promos!" id="email-input" onfocus="displayInfo(), displaySecondInfo()" type="submit">
+        </form>
+        <div id="info-text2"></div>       
+      </div>
+      
+      <div class="footer-creds">
+
+      </div>
+    </footer>
+    <div class="up-arrow" id="up-arrow">
+      <span class="custom-class">^</span>
+    </div>
+    <script src="scripts\script.js"></script>
+</body>
+</html>
