@@ -1,0 +1,743 @@
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url("fonts/Montserrat-Light.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: 'SuisseIntl-Regular';
+  src: url("SuisseIntl-Regular.ttf") format("ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#main {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 500px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 5px 20px 50px #000;
+  border: 2px solid black;
+}
+
+
+#chk {
+  display: none;
+}
+
+.signup {
+  width: 100%;
+  height: 100%;
+}
+
+#main label {
+  color: black;
+  text-transform: uppercase;
+  font: 12px SuisseIntl-Regular, sans-serif;
+  justify-content: center;
+  display: flex;
+  margin: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.login label {
+  padding: 30px;
+}
+
+.popup{
+  animation: pop 0.5s ease-in-out;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+input {
+  width: 100px;
+  height: 30px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  outline: none;
+  font: 12px SuisseIntl-Regular, sans-serif;
+}
+
+input::placeholder{
+  color: rgba(0, 0, 0, 0.5);
+}
+
+input:hover {
+  border: 1px solid black;
+}
+
+#main button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+  font: 12px SuisseIntl-Regular, sans-serif;
+  background: none;
+	color: black;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+  text-decoration: underline;
+}
+#main button:hover{
+  text-decoration: none;
+}
+
+.login{
+	height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+
+}
+.login label{
+	color: black;
+	transform: scale(.8);
+}
+
+#chk:checked ~ .login{
+	transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.8);
+}
+
+ul {
+  list-style: none;
+}
+
+#slide-btn {
+  display: grid;
+  position: relative;
+  width: auto;
+  background: none;
+  color: black;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+  grid-row: 2/3;
+  font: 12px SuisseIntl-Regular, sans-serif;
+  cursor: pointer;
+  text-decoration: underline;
+  text-align: left;
+}
+
+#log-btn {
+  display: grid;
+  position: relative;
+  width: auto;
+  background: none;
+  color: black;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+  grid-row: 1/2;
+  font: 12px SuisseIntl-Regular, sans-serif;
+  cursor: pointer;
+  text-decoration: underline;
+  text-align: left;
+}
+
+.btn-container {
+  position: fixed;
+  top: 100px;
+  left: 50.1px;
+  display: grid;
+  grid-template-rows: repeat(2, 20px);
+  grid-row-gap: 1rem;
+  width: 7%;
+  height: 5%;
+}
+
+.slide-container.slide-in {
+  transform: translateX(0);
+}
+
+.slide-container {
+  position: fixed;
+  display: grid;
+  grid-template-rows: repeat(5, 40px);
+  grid-row-gap: 20px;
+  left: 0;
+  justify-self: center;
+  width: 10rem;
+  height: 23vh;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  background-color: white;
+  z-index: 1;
+}
+
+
+
+#text-box-content {
+  padding: 10px;
+  display: grid;
+  grid-row: 1/2;
+  border-bottom: 1px solid black;
+  font: 12px SuisseIntl-Regular, sans-serif;
+  line-height: 1.5;
+}
+
+#date-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  line-height: 2;
+}
+
+#label {
+  text-align: left;
+  font: 9px SuisseIntl-Regular, sans-serif;
+}
+
+#value {
+  text-align: right;
+  font: 9px SuisseIntl-Regular, sans-serif;
+}
+
+#text-box-button1 {
+  padding: 10px;
+  width: 6rem;
+  display: grid;
+  grid-row: 2/3;
+  justify-self: center;
+  border: 1px solid black;
+  font: 12px SuisseIntl-Regular, sans-serif;
+}
+
+#text-box-button1 button {
+  border: none;
+  color: black;
+  background: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+#text-box-button2 {
+  padding: 10px;
+  width: 6rem;
+  display: grid;
+  grid-row: 3/4;
+  justify-self: center;
+  border: 1px solid black;
+  font: 12px SuisseIntl-Regular, sans-serif;
+}
+
+#text-box-button2 button {
+  border: none;
+  color: black;
+  background: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+#text-box-button3 {
+  padding: 10px;
+  width: 6rem;
+  display: grid;
+  grid-row: 4/5;
+  justify-self: center;
+  border: 1px solid black;
+  font: 12px SuisseIntl-Regular, sans-serif;
+}
+
+#text-box-button3 button {
+  border: none;
+  color: black;
+  background: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+#text-box-button4 {
+  padding: 10px;
+  width: 9rem;
+  display: grid;
+  grid-row: 5/6;
+  justify-self: center;
+  border: 1px solid black;
+  font: 12px SuisseIntl-Regular, sans-serif;
+}
+
+#text-box-button4 button {
+  border: none;
+  color: black;
+  background: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+
+#opinions-form-container {
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 5px 20px 50px #000;
+  border: 2px solid black;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  }
+
+#opinions-form-container.show {
+  display: block;
+}
+  
+
+  #opinions-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  #opinions-form label {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
+  color: black;
+  text-transform: uppercase;
+  font: 12px SuisseIntl-Regular, sans-serif;
+  font-weight: bold;
+  }
+  
+  #opinions-form input[type="text"],
+  #opinions-form input[type="email"],
+  #opinions-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  resize: vertical;
+  }
+  
+  #opinions-form select {
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  }
+  
+  #opinions-form input[type="submit"] {
+  width: 100%;
+  color: black;
+  background-color: #eee;
+  border: none;
+  text-transform: uppercase;
+  font: 12px SuisseIntl-Regular, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  }
+
+.navTop {
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 95vw;
+  height: 2.3vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border-radius: 60px;
+}
+
+.menu-btn {
+  position: absolute;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+.menu-btn__burger {
+  width: 30px;
+  height: 4px;
+  background: black;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: black;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+/*desloca 1 faixa para cima e outra para baixo */
+.menu-btn__burger::before {
+  transform: translateY(-6px);
+}
+.menu-btn__burger::after {
+  transform: translateY(6px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-32px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.menu {
+  display: none; /* hide the menu by default */
+}
+.menu-btn.open + .menu {
+  display: inline-block; /* display the menu when the button is clicked */
+}
+
+.menu-links {
+  position: absolute;
+  left: 100px;
+  top: 3px;
+}
+
+.menu-links a{
+  text-decoration: none; /* remove the underline */
+  font: 12px SuisseIntl-Regular, sans-serif;
+  color: black;
+}
+
+
+.menu__item {
+  display: inline-block;
+  margin-right: 10px;
+  
+}
+
+.menuItem a{
+  text-decoration: none; /* remove the underline */
+  font: 12px SuisseIntl-Regular, sans-serif;
+  color: black;
+}
+
+.navShowed {
+  position: absolute;
+  display: flex;
+  width: 280px;
+  right: 10px;
+  margin-top: auto;
+}
+
+.menuItem {
+  font: 12px SuisseIntl-Regular, sans-serif;
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+  color: black;
+}
+
+.discover-link {
+  position: relative;
+}
+
+.search-bar {
+  position: absolute;
+  display: inline-block;
+  right: 300px;
+  margin-top: auto;
+}
+
+.search-bar input {
+  direction: rtl;
+  width: 70px;
+  font: 12px SuisseIntl-Regular, sans-serif;
+  color: black;
+  text-transform: uppercase;
+  text-align: right;
+  padding: 0 10px;
+  background: none;
+  border: none;
+  border-radius: 30px;
+  transition: width 0.3s ease;
+  height: 20px;
+}
+
+.search-bar i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: black;
+  font: 12px SuisseIntl-Regular, sans-serif;
+  cursor: pointer;
+}
+
+.search-bar input:focus {
+  width: 200px;
+  background-color: blue;
+  padding: 0 10px 0 0px;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  font: 12px SuisseIntl-Regular, sans-serif;
+  color: black;
+}
+
+.container {
+  position: relative;
+  height: 8vh;
+  width: 100vw; /* set the width of the container to fill the entire screen */
+  overflow: hidden; /* enable horizontal scrolling */
+  display: flex; /* use flexbox layout for the items */
+  flex-direction: row;
+  white-space: nowrap; /* prevent the items from wrapping to the next line */
+}
+
+
+.item {
+  position:absolute; 
+  top:0px; 
+  left:0px; 
+  overflow:hidden; 
+  white-space: nowrap;
+  animation: bannermove 20s linear infinite;
+}
+
+.item img {    
+  margin: 0 5em;
+  width: 100px;
+}
+
+@keyframes bannermove {
+  10% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-50%, 0);
+  }
+}
+
+#homepage-footer-text {
+  font: 9px SuisseIntl-Regular, sans-serif;
+  color: black;
+  position: fixed;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%);
+  width: calc(100% - 24px);
+  text-align: center;
+}
+
+.slide-up-footer {
+  grid-template-rows: 1fr 1fr 1fr;
+  font: 9px SuisseIntl-Regular, sans-serif;
+  position: fixed;
+  bottom: -1000px; /* or another value that will hide the footer */
+  width: 100vw;
+  height: 15%;
+  transition: all 0.7s ease-in-out;
+  background-color: white;
+  
+}
+
+.slide-up-footer.show {
+  top: 500px;
+}
+
+.footer-text {
+  display: grid;
+  grid-row: 1/2;
+  font: 9px SuisseIntl-Regular, sans-serif;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  justify-content: center;
+  position: relative;
+  display: grid;
+}
+
+.footer-text2 {
+  font: 9px SuisseIntl-Regular, sans-serif;
+  grid-row: 2/3;
+  color: black;
+  text-align: top;
+  padding: 10px;
+}
+.footer-text2 a{
+  text-decoration: none;
+  color: black;
+  margin: 0px 10px;
+}
+
+.footer-text2 a:hover{
+  text-decoration: underline;
+  color: black;
+}
+
+.footer-creds {
+  font: 9px SuisseIntl-Regular, sans-serif;
+  position: relative;
+  display: grid;
+  grid-row: 3/4;
+  color: black;
+  text-align: top;
+  padding: 10px;
+  margin: 0px 10px;
+}
+
+.up-arrow {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin: 2rem;
+}
+.custom-class{
+  font-weight: bold;
+  font: 20px SuisseIntl-Regular, sans-serif;
+  color:black;
+  cursor: pointer;
+}
+
+.sign-up-promos {
+  display: grid;
+  position: absolute;
+  justify-content: flex-end;
+  grid-row: 1/2;
+  grid-template-rows: 1fr 1fr 1fr ;
+  flex-wrap: wrap;
+  padding: 10px;
+  color: black;
+}
+
+.sign-up-promos form {
+  display: grid;
+  align-items: center;
+  grid-row: 2/3;
+  justify-content: flex-end;
+  background: transparent;
+  border-bottom: 2px solid black;
+}
+
+
+.sign-up-promos label {
+  margin-right: 10px;
+}
+
+.sign-up-promos input {
+  margin-right: 10px;
+  text-align: left;
+  border: none;
+  background: transparent;
+  font: 10px SuisseIntl-Regular, sans-serif;
+  color: black;
+  padding: 5px;
+  width: 200px
+}
+
+.sign-up-promos input::placeholder {
+  font: 10px SuisseIntl-Regular, sans-serif;
+  color: black;
+
+}
+
+.sign-up-promos input:focus {
+  outline: none;
+  background: transparent;
+}
+input:-webkit-autofill {
+  background-color: transparent !important;
+}
+#info-text {
+  display: grid;
+  text-transform: uppercase;
+  grid-row: 1/2;
+  align-items: flex-end;
+  transition: visibility 0.5s ease-in-out;
+}
+#info-text2 {
+  width: 200px; /* or any other value you prefer */
+  display: grid;
+  grid-row: 3/4;
+  align-items: center;
+  transition: visibility 0.5s ease-in-out;
+}
+
+#info-text.visible {
+  visibility: visible;
+  transform: translateY(-5px);
+  transition: visibility 0.5s, transform 0.5s ease-in-out;
+}
+
+#info-text2.visible {
+  visibility: visible;
+  transform: translateY(10px);
+  transition: visibility 0.5s, transform 0.5s ease-in-out;
+}
